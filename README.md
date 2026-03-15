@@ -1,5 +1,9 @@
 # SteflixPictures
 
+**🔗 Live Demo:** [View the website here](https://catinca2005.github.io/Steflix-Pictures/)
+
+---
+
 **SteflixPictures** is a digital platform for cinematic adaptations of Romanian literature, developed as a high school certificate project.
 
 ## Purpose
