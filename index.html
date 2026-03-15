@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>steflixPictures</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .video-container {
+            margin: 55px auto; /* Top and bottom margin 55px, auto left and right margin for centering */
+            width: auto; /* Set width to auto */
+            height: auto; /* Set height to auto */
+            position: relative;
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%; /* Ensure the video fills the container width */
+            height: 100%; /* Ensure the video fills the container height */
+            object-fit: cover; /* Maintain aspect ratio and fill container */
+            border-radius: 15px; /* Apply rounded corners to the video */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between; /* Asigură distanța maximă între elemente */
+            align-items: center; /* Aliniază elementele pe axa verticală */
+            padding: 10px 5px; /* Reducem distanța între perechile de elemente */
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 20px 40px; /* Reducem distanța între videoclip și text */
+        }
+
+        .w3-display-topleft {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 35px; /* Mărește dimensiunea textului la 24 de pixeli */
+        }
+
+        .rounded {
+            border-radius: 15px; /* Add rounded corners */
+            /* object-fit: cover; */ /* Remove or adjust this property */
+            overflow: hidden;
+        }
+
+        .rounded_bg {
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            padding: 10px 30px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Styles for the images */
+        .image {
+            width: 200px;
+            height: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        .image.active {
+            transform: scale(2); /* Change this value as needed */
+            z-index: 1; /* Ensure the active image is on top */
+        }
+
+    </style>
+    <link rel="stylesheet" href="w3.css">
+</head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="#" class="w3-bar-item w3-button rounded"><b>STEFLIX PICTURES</b></a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="#projects" class="w3-bar-item w3-button rounded" >Proiecte</a>
+				<a href="#about" class="w3-bar-item w3-button rounded">Despre noi</a>
+                <a href="#photo" class="w3-bar-item w3-button rounded">Poze</a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-display-container w3-content w3-wide" id="home">
+        <div class="video-container" style="width:120%; height:120%; margin: 55px -90px">
+            <video autoplay muted playsinline>
+                <source src="misc\Intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </header>
+    <div class="w3-content w3-padding" style="max-width:1564px">
+        <div class="w3-container w3-padding-32">
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="font-size: 30px;">Descriere</h3>
+            <div style="background-color: #ffffff; padding: 10px;">
+                <p class="rounded_bg" style=" font-size: 18px;">
+                    Stelfix a luat naștere datorită unui grup de liceeni pasionați
+                    de literatură, care, dornici să dea viață operelor clasice într-un mod cu totul inedit,
+                    au hotărât să creeze scurtmetraje pentru textele literare studiate la ora de limba română.
+                    Acest proiect are ca scop atât expunerea în imagini a cuvântului, cât și dezvoltarea anumitor
+                    calități precum lucrul în echipă și stimularea creativității.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Page content -->
+    <div class="w3-content w3-padding" style="max-width:1564px">
+
+        <!-- Project Section -->
+        <div class="w3-container w3-padding-32" id="projects">
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="font-size: 30px;">Proiecte</h3>
+        </div>
+
+        <div class="container">
+            <div class="video-container">
+                <div class="w3-display-topleft w3-black w3-padding rounded" style="border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Moara cu noroc</div>
+                <iframe class="rounded" width="984" height="710" src="https://www.youtube.com/embed/V-uwhN0MC68" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="text-container rounded_bg">
+                <p>
+                    Totul a început în clasa  a-X-a când firul narativ al nuvelei ,,Moara cu noroc” de Ioan Slavici i-a captivat pe câțiva dintre elevi. Întrebări de tipul ,,Ce aș fi făcut eu în locul lui Ghiță?” sau ,,De ce omul perimite ca banul să ia stăpânire asupra sufletului său?” și le-au pus licceeni echipei Stelfix, iar acest interes pentru înțelegerea mesajului autorului i-a motivat să realizeze un trailer al nuvelei. Astfel, regizorul Corina a consider că rolul bătrânei, mama Anei și soacra lui Ghiță, i se potrivește Catincăi, o fire calmă și cumpătată, care încearcă mereu să își ajute colegii cu sfaturi înțelepte. De asemenea, a convins și alți colegi de clasă precum Ionuț, Ștefan și  Alexia să ia parte la această ,,aventură”. Entuzianst și mereu dornic să se  implice în activități extrașcolare, Ștefan a răspuns afirmativ provocării și l-a interpretat pe cârcimar, personajul principal, cu mult simț de răspundere.
+                    Mai mult, costumația și cadrul adecvat a constituit un element la fel de important pentru echipă precum conținutul videoclipului. Ca urmare, adolscenții au fost atenți să aleagă un loc corespunzător și anume Muzeul Satului Bucovinean din Suceava, și totodată, au îmbrăcat cu drag portul polular la îndemnul Corinei. Pe lângă toate avantajele pe care le oferă colaborarea cu colegii de clasă în vederea realizării videoclipurilor pentru Stelix, liceeni implicați mai beneficiază de un mare folos: rețin pe termen lung informații utile pentru examenul de bacalaureat precum scene semnificative pentru tema nuvelei ( pe care aceștia le interpretează prin film). În cazul 	operei ,,Moara cu noroc” membrii echipei au realizat scene precum întâlnirea dintre Lică Sămădăul și Ghiță și finalul surpins prin viziunea bătrânei.
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="video-container">
+                <div class="w3-display-topleft w3-black w3-padding rounded" style="border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Enigma Otiliei</div>
+                <iframe class="rounded" width="984" height="710" src="https://www.youtube.com/embed/pLe3ayyX55U" title="Enigma Otiliei (trailer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="text-container rounded_bg">
+                <p>Un alt text care le-a stârnit interesul membrilor echipei Stelfix a fost romanul ,,Enigma Otiliei”, scenele alese de elevi fiind venirea lui Felix în casa lui Moș Costache, vizitarea moșiei lui Pascalopol și dicuția dintre Felix și Olilia cu o seară înainte ca aceasta să fugă la Paris. Catinca a fost cea care, bucuroasă și dornică să repete experiența filmării unui trailer alături de colegi, a ținut ca proiectul să se realizeze la ea acasă. A ales să o interpreteze pe Aglae Tulea, vrând să se pună în pielea unui personaj negativ, plin de ură și invidie. Gabriela i s-a alăturat, luând rolul fiicei Aglae, Aurica. Alexia, colega noastră cu ochii albaștri și pasionată de pian, a  simțit că rezonează cu personajul Otilia, iar Casian, impresioant de ambiția viitorului medicinist Felix a decis să îl interpreteze. Tudor, fiind atras de atmosfera și energia echipei s-a implicat de asemenea, jucând rolul bătrânului Costache. Împreună, addolescenții și-au expus viziunea și punctul de vedere sub îndrumarea regizorului și a cameramanului Luca, care a dedicat mult timp editării videoului, fiind extrem de atent la detalii.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="video-container">
+                <div class="w3-display-topleft w3-black w3-padding rounded" style="border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Vara Stefanistilor</div>
+                <iframe class="rounded" width="984" height="710" src="https://www.youtube.com/embed/__6mQa8E5YI" title="Vara Stefanistilor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="text-container rounded_bg">
+                <p>"Vara Ștefaniștilor" este un proiect captivant sub forma unui videoclip amuzant ce aduce în prim-plan povești și întâmplări din istoria bogată a liceului. Prin intermediul acestui proiect, sunt redate în mod captivant și autentic momente memorabile, întâmplări și amintiri care au definit liceul și comunitatea sa. Cu umor și creativitate, videoclipul surprinde esența și spiritul Ștefaniștilor, oferind o călătorie plină de amuzament și nostalgie prin istoria școlii.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="video-container">
+                <div class="w3-display-topleft w3-black w3-padding rounded" style="border-top-right-radius: 0px; border-bottom-left-radius: 0px;">Iadul din perspectiva elevilor</div>
+               <iframe class="rounded" width="984" height="710" src="https://www.youtube.com/embed/zfgriRO8Z70" title="Iadul din perspectiva elevilor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="text-container rounded_bg">
+                <p>O temă dată de doamna profesoră de limba română la clasă-,,Cum arată iadul din perspectiva unui elev?” a fost ignorată, pentru o perioadă, de elevii care acum au trecut deja în clasa a XI-a. Însă, după o pauză destul de lungă, membrii Steflix au decis să se reunească și să încerce ceva nou: să ,,surprindă în imagini” tema pentru acasă. Pornind de la ideea că fiecare persoană percepe iadul în mod diferit, orice  om reacționând altfel la situații dificile, echipa a creat un video care să evidențieze personalitățile diferite ale unor școlari, care interpretează ,,oroarea” bazat pe valoarea propriilor principii. De plidă, Gabriela a ales să se se pună în locul profesorului pentru care unul dintre cele mai devastatoate chestiuni este să aibă parte doar de elevi dezinteresați, cărora nu le poate captiva atenția. Ilinca a fost cea care, cu un spirit antreprenorial, a venit cu ideea să arate că, pentru unele persoane, devastator este să își risipească vremea, să nu își atingă potențialul maxim, să nu facă pe cât de mulți bani pe cât ar putea, într-o lume materială și competitivă. Ștefan a reprezentat tipul tocilarului, oripilat de o ,,notă mică”-9,50. De altminteri, pentru firea artistică, cea mai mare durere este să își vadă ustensilele de pictat/desenat stricate. Scopul acestui proiect a fost să pună în lumină mai multe perspective, ilustrând universul exterior al unor peronaje, interpretat cu ajutorul universului interior al acestora, și să sugereeze ideea că, deși viața presupune bineînțeles multe coborâșuri și situații dificile, ține de noi să facem o schimbare, pentru că suntem cei care avem putere asupra propriilor gânduri.</p>
+            </div>
+        </div>
+
+
+        <!-- About Section -->
+        <div class="w3-container w3-padding-32" id="about">
+            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="font-size: 30px;">Despre noi</h3>
+
+            <div class="w3-row-padding w3-grayscale">
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <img class="rounded" src="misc\luca.jpeg" alt="Luca" style="width:100%">
+                    <h3>Leonte Luca</h3>
+                    <p class="w3-opacity">Editor</p>
+                    <p>Fiecare cadru, fiecare unghi și fiecare secvență de montaj sunt atent lucrate de Luca pentru a aduce viață povestirilor noastre.</p>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <img class="rounded" src="misc\corina.jpeg" alt="Corina" style="width:100%">
+                    <h3>Bacrau Corina</h3>
+                    <p class="w3-opacity">Regizor</p>
+                    <p>Corina, regizorul echipei Stelfix, ghidează întreaga echipă către îndeplinirea viziunii noastre comune.</p>
+                </div>
+
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <img class="rounded" src="misc\gabi.jpeg" alt="Gabriela" style="width:100%">
+                    <h3>Rimbu Gabriela</h3>
+                    <p class="w3-opacity">Actrita</p>
+                    <p>
+                        Gabriela este o actriță extrem de talentată, cu o prezență puternică pe ecran și o capacitate impresionantă de a aduce profunzime și autenticitate personajelor pe care le interpretează.
+                    </p>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <img class="rounded" src="misc\catinca.jpeg" alt="Catinca" style="width:100%">
+                    <h3>Rauliuc Catinca</h3>
+                    <p class="w3-opacity">Actrita</p>
+                    <p>Catinca este o actriță talentată, cu o prezență carismatică pe ecran și o abilitate remarcabilă de a aduce personajele la viață prin interpretarea sa autentică și captivantă. </p>
+                </div>
+            </div>
+
+            <!-- Photo grid -->
+            <div class="w3-container w3-padding-32" id="photo">
+                <h3 style="font-size: 30px;" class="w3-border-bottom w3-border-light-grey w3-padding-16">Poze</h3>
+
+                <!-- First Photo Grid-->
+                <div class="w3-row-padding w3-padding-16 w3-center">
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo1.jpg" alt="Sandwich" style="width:100%">
+                    </div>
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo2.jpg" alt="Steak" style="width:100%">
+                    </div>
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo3.jpg" alt="Cherries" style="width:100%">
+                    </div>
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo4.jpg" alt="Pasta and Wine" style="width:100%">
+                    </div>
+                </div>
+                <div class="w3-row-padding w3-padding-16 w3-center">
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo5.jpg" alt="Sandwich" style="width:100%">
+                    </div>
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo6.jpg" alt="Steak" style="width:100%">
+                    </div>
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo7.jpg" alt="Cherries" style="width:100%">
+                    </div>
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo8.jpg" alt="Pasta and Wine" style="width:100%">
+                    </div>
+                </div>
+                <div class="w3-row-padding w3-padding-16 w3-center">
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo9.jpg" alt="Sandwich" style="width:100%">
+                    </div>
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo10.jpg" alt="Steak" style="width:100%">
+                    </div>
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo11.jpg" alt="Cherries" style="width:100%">
+                    </div>
+                    <div class="w3-quarter">
+                        <img class="rounded" src="misc/photo12.jpg" alt="Pasta and Wine" style="width:100%">
+                    </div>
+                </div>
+            </div>
+            <!-- End page content -->
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-16 rounded">
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+        </footer>
+
+        <!-- Smooth scroll to id -->
+        <script>
+            // Smooth scrolling function
+            function smoothScroll(target, duration) {
+                var targetElement = document.getElementById(target.substring(1)); // Remove the '#' character from the target ID
+                if (!targetElement && target !== '#') { // Added condition to handle '#' case
+                    console.error("Target element not found:", target);
+                    return;
+                }
+
+                var targetPosition = target === '#' ? 0 : targetElement.offsetTop; // Adjust target position for '#' case
+                var startPosition = window.pageYOffset;
+                var distance = targetPosition - startPosition;
+                var startTime = null;
+
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    var timeElapsed = currentTime - startTime;
+                    var scrollAmount = ease(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, scrollAmount);
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+
+                function ease(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+
+                requestAnimationFrame(animation);
+            }
+
+            // Attach event listeners to anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var target = this.getAttribute('href');
+                    if (target !== '#' && document.getElementById(target.substring(1))) {
+                        console.log("Smooth scrolling to:", target);
+                        console.log("Target element ID:", target.substring(1));
+                        smoothScroll(target, 1000); // Adjust duration as needed
+                    } else if (target === '#') { // Handle '#' case
+                        console.log("Smooth scrolling to top of the page");
+                        smoothScroll(target, 1000); // Adjust duration as needed
+                    }
+                });
+            });
+        </script>
+
+</body>
+</html>
